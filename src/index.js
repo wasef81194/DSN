@@ -2,24 +2,33 @@ const express = require('express')
 const crypto = require('crypto')
 //Database
 const db = require('../config/databases')
+const { TablesAPI } = require('./routers/index')
 
-const { connected } = require('process')
+//const { connected } = require('process')
+
+const bodyParser = require('body-parser');
 
 //TestDB
 db.authenticate()
     .then(() => console.log('Database connected...'))
     .catch(err => console.log('Error: ' +err))
 
-const {Ville} = require('./models/index') // Avec la methode export
+const {Ville, User, Camion, Entrepot, Grade, Livraison} = require('./models/index') // Avec la methode export
 
 // const Ville = require('./models/Ville')
 
 
 db.sync()
 
-
 const app = express()
 const port = 3000
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
+app.use('/api/tables', TablesAPI)
 
 app.get('/', (req, res) => {
     res.send('Hello World!')
