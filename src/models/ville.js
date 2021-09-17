@@ -6,4 +6,5 @@ const Ville = db.define('ville',{
         type: Sequelize.STRING
     }
 })
-    
+
+module.exports= Ville

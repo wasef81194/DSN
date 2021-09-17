@@ -1,7 +1,7 @@
 const express = require('express')
 const crypto = require('crypto')
 const bodyParser = require('body-parser')
-
+const router = require("./routes/routeur_ville")
 
 
 //database
@@ -24,7 +24,12 @@ db.sync()
 const app = express()
 const port = 3000
 
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
 
+// parse application/json
+app.use(bodyParser.json())
+app.use(router)
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
