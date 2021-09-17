@@ -1,22 +1,26 @@
 {
-  "name": "dsn",
+  "name": "cy-lw2022-nvdsblk",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Projet CY LW2022",
+  "main": "src/index.js",
   "scripts": {
+    "serve": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wasef81194/DSN.git"
+    "url": "git+https://github.com/fmichaud/cy-lw2022-nvdsblk.git"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [],
+  "author": "François Michaud",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wasef81194/DSN/issues"
+    "url": "https://github.com/fmichaud/cy-lw2022-nvdsblk/issues"
   },
-  "homepage": "https://github.com/wasef81194/DSN#readme",
+  "homepage": "https://github.com/fmichaud/cy-lw2022-nvdsblk#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mysql2": "^2.3.0",
+    "sequelize": "^6.6.5"
   }
 }
