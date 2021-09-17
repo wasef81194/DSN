@@ -13,7 +13,7 @@ db.authenticate()
     .then(() => console.log('Database connected...'))
     .catch(err => console.log('Error: ' +err))
 
-const {Ville, User, Camion, Entrepot, Grade, Livraison} = require('./models/index') // Avec la methode export
+const {Ville, User, Camion, Entrepot, Grade, Livraison} = require('./routers/models') // Avec la methode export
 
 // const Ville = require('./models/Ville')
 
