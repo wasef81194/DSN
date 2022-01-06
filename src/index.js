@@ -31,7 +31,7 @@ app.use(bodyParser.json())
 app.use('/api/tables', TablesAPI)
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send('we will see')
 })
 
 /* app.get('/sha1', (req, res) => {
@@ -39,12 +39,6 @@ app.get('/', (req, res) => {
     if ((s == null) || (s.length == 0)) {
         res.status(400).send({message: "An error occurs: null or empty string"})
     }
-
-
-
-
-
-
     const shasum = crypto.createHash('sha1')
     shasum.update(s)
     const hashedValue = shasum.digest('hex') // => "0beec7b5ea3f0fdbc95d0dd47f3c5bc275da8a33"
