@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const db = require('../server/config/database')
+const db = require('../../config/database')
 
 
 
@@ -18,8 +18,6 @@ db.sync()
 
 const app = express()
 const port = 3001
-
-const db = require('../../config/databases');
 
 router.get('/', (req, res, next) => {
     Ville.findAll()

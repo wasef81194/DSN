@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize')
-const db = require('../../config/databases')
+const db = require('../../config/database')
 
 const Ville = db.define('ville', {
     nom_ville: {

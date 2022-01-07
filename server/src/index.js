@@ -1,8 +1,8 @@
 const express = require('express')
 const crypto = require('crypto')
 //Database
-const db = require('../server/config/database')
-const { TablesAPI } = require('../server/src/routes/index')
+const db = require('../config/database')
+const { TablesAPI } = require('./routes/index')
 
 //const { connected } = require('process')
 
@@ -13,15 +13,13 @@ db.authenticate()
     .then(() => console.log('Database connected...'))
     .catch(err => console.log('Error: ' +err))
 
-const {Ville, User, Camion, Entrepot, Grade, Livraison} = require('./routers/models') // Avec la methode export
-
-// const Ville = require('./models/Ville')
+const {Ville, User, Camion, Entrepot, Grade, Livraison} = require('./models/index') // Avec la methode export
 
 
 db.sync()
 
 const app = express()
-const port = 3000
+const port = 3001
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
