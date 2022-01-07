@@ -1,8 +1,8 @@
 const express = require('express')
 const crypto = require('crypto')
 //Database
-const db = require('../server/config/database')
-const { TablesAPI } = require('../server/src/routes/index')
+const db = require('./config/database')
+const { TablesAPI } = require('./routes/index')
 
 //const { connected } = require('process')
 
